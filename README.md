@@ -358,7 +358,8 @@ Each component's documentation follows IEEE standards for SRS and SDS documents:
 ### Model Documentation
 - [Model SRS - Requirements](docs/model/MODEL_SRS.md)
 - [Model SDS - Design](docs/model/MODEL_SDS.md)
-- [Dataset & Model Research](docs/model/DATASET_AND_MODEL_RESEARCH.md) - **NEW!**
+- [Dataset & Model Research](docs/model/DATASET_AND_MODEL_RESEARCH.md) - **Comprehensive Guide**
+- [FYP Quick Start Guide](docs/model/FYP_QUICK_START.md) - **Start Here!** ⭐
 
 ### App Documentation
 - [App SRS - Requirements](docs/app/APP_SRS.md)
