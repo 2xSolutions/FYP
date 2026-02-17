@@ -12,10 +12,11 @@ This document provides a quick reference to navigate the Smart Lens documentatio
 |-----------|------|------|-------|---------|
 | **Model** | SRS | [MODEL_SRS.md](model/MODEL_SRS.md) | ~400 | AI Model Requirements |
 | **Model** | SDS | [MODEL_SDS.md](model/MODEL_SDS.md) | ~700 | AI Model Design |
+| **Model** | Research | [DATASET_AND_MODEL_RESEARCH.md](model/DATASET_AND_MODEL_RESEARCH.md) | ~1,100 | Datasets, Models, Storage |
 | **App** | SRS | [APP_SRS.md](app/APP_SRS.md) | ~850 | App Requirements |
 | **App** | SDS | [APP_SDS.md](app/APP_SDS.md) | ~1100 | App Design |
 
-**Total Documentation**: ~3,300 lines across 4 comprehensive documents
+**Total Documentation**: ~4,400 lines across 5 comprehensive documents
 
 ---
 
@@ -28,8 +29,9 @@ This document provides a quick reference to navigate the Smart Lens documentatio
 
 ### For AI/ML Developers
 1. Start with [MODEL_SRS.md](model/MODEL_SRS.md) - Complete document
-2. Deep dive into [MODEL_SDS.md](model/MODEL_SDS.md) - Sections 2-7
-3. Review interface specifications in MODEL_SDS.md - Section 6
+2. **Review [DATASET_AND_MODEL_RESEARCH.md](model/DATASET_AND_MODEL_RESEARCH.md) - Datasets & Pretrained Models** ⭐ NEW!
+3. Deep dive into [MODEL_SDS.md](model/MODEL_SDS.md) - Sections 2-7
+4. Review interface specifications in MODEL_SDS.md - Section 6
 
 ### For Mobile App Developers
 1. Start with [APP_SRS.md](app/APP_SRS.md) - Complete document
@@ -104,6 +106,52 @@ This document provides a quick reference to navigate the Smart Lens documentatio
 - YOLOv8 for threat classification
 - Non-Maximum Suppression (NMS)
 - Confidence thresholding
+
+---
+
+### DATASET_AND_MODEL_RESEARCH.md - Research Guide ⭐ NEW!
+
+**Key Sections**:
+- **Section 2**: Dataset Research
+  - Public datasets for theft, violence, weapons, fire
+  - Recommended sizes: 3,000-5,000 images for FYP
+  - Annotation tools and strategies
+  - Data augmentation techniques
+- **Section 3**: Pretrained Models
+  - YOLOv8 variants (nano, small, medium)
+  - Transfer learning approaches
+  - Training configurations and timelines
+  - Model selection criteria
+- **Section 4**: Existing Solutions
+  - Commercial systems (Deep Sentinel, Solink, Verkada)
+  - Academic research approaches
+  - Open source projects
+  - Best practices from industry
+- **Section 5**: Storage Optimization
+  - Motion-based vs AI-triggered recording
+  - Hybrid storage strategies (local + cloud)
+  - Video compression techniques
+  - Cost analysis and budgeting
+- **Section 6**: FYP Recommendations
+  - Realistic dataset sizes (2,000-5,000 images)
+  - Expected model performance
+  - Implementation timeline (14 weeks)
+  - Budget: <$100 total
+
+**Critical Recommendations**:
+- ✅ Use YOLOv8s pretrained on COCO dataset
+- ✅ Collect 3,000-4,000 annotated images
+- ✅ Train on Google Colab (free T4 GPU)
+- ✅ Implement motion-based recording (90% storage savings)
+- ✅ Use Backblaze B2 for cloud storage (~$1.50/month)
+- ✅ Expected 75-85% mAP with proper training
+
+**Technology Stack**:
+- Datasets: Roboflow Universe, Kaggle, UCF Crime
+- Annotation: Roboflow (free tier: 1,000 images)
+- Training: Google Colab / Kaggle (free GPU)
+- Storage: Backblaze B2, local HDD
+- Model: YOLOv8 (Ultralytics)
 
 ---
 
@@ -302,6 +350,21 @@ Referenced in original SDS document:
 **Deployment?**
 - Model: MODEL_SDS.md → Section 8
 - App: APP_SDS.md → Section 10
+
+**Datasets & Training?**  ⭐ NEW!
+- DATASET_AND_MODEL_RESEARCH.md → Section 2 (Datasets)
+- DATASET_AND_MODEL_RESEARCH.md → Section 3 (Pretrained Models)
+- DATASET_AND_MODEL_RESEARCH.md → Section 6 (FYP Recommendations)
+
+**Storage Optimization?**  ⭐ NEW!
+- DATASET_AND_MODEL_RESEARCH.md → Section 5 (Storage Optimization)
+- Cost analysis and cloud storage options
+- Motion-based vs AI-triggered recording
+
+**Existing Solutions?**  ⭐ NEW!
+- DATASET_AND_MODEL_RESEARCH.md → Section 4 (Existing Solutions & Strategies)
+- Commercial systems and academic research
+- Best practices from industry
 
 ---
 
