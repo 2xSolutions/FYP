@@ -77,7 +77,7 @@ The AI Detection Model is a standalone Python-based component that processes vid
 ### Technology Stack
 - **Language**: Python 3.8+
 - **Framework**: PyTorch/TensorFlow
-- **Detection**: YOLOv8
+- **Detection**: YOLOv8/YOLOv9/YOLOv10/YOLO11 (or RT-DETR, EfficientDet — see [model research guide](docs/model/DATASET_AND_MODEL_RESEARCH.md#37-non-yolo-pretrained-models))
 - **Video Processing**: OpenCV
 - **API**: FastAPI (for model server)
 
@@ -358,7 +358,7 @@ Each component's documentation follows IEEE standards for SRS and SDS documents:
 ### Model Documentation
 - [Model SRS - Requirements](docs/model/MODEL_SRS.md)
 - [Model SDS - Design](docs/model/MODEL_SDS.md)
-- [Dataset & Model Research](docs/model/DATASET_AND_MODEL_RESEARCH.md) - **Comprehensive Guide**
+- [Dataset & Model Research](docs/model/DATASET_AND_MODEL_RESEARCH.md) - **Comprehensive Guide** (includes advanced YOLO variants v9/v10/v11 and non-YOLO alternatives)
 - [FYP Quick Start Guide](docs/model/FYP_QUICK_START.md) - **Start Here!** ⭐
 
 ### App Documentation
