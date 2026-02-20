@@ -13,6 +13,9 @@ This is your quick reference guide to get started with the Smart Lens AI surveil
 | **Project Overview** | [README.md](../README.md) | All |
 | **Dataset Sources** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 2 |
 | **Model Selection** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 3 |
+| **Advanced YOLO Variants** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 3.6 |
+| **Non-YOLO Models** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 3.7 |
+| **Model Decision Guide** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 3.8 |
 | **Training Guide** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Sections 3.5, 6 |
 | **Storage Setup** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 5 |
 | **Implementation Plan** | [DATASET_AND_MODEL_RESEARCH.md](DATASET_AND_MODEL_RESEARCH.md) | Section 7 |
@@ -28,13 +31,15 @@ This is your quick reference guide to get started with the Smart Lens AI surveil
 | Decision | Recommendation | Reason |
 |----------|---------------|---------|
 | **Dataset Size** | 3,000-4,000 images | Achievable in 4-6 weeks, good accuracy |
-| **Model** | YOLOv8s (small) | Best speed/accuracy for FYP demo |
+| **Model** | YOLOv8s or YOLO11s | Best speed/accuracy for FYP demo |
 | **Training Platform** | Google Colab (free) | Free T4 GPU, 3-4 hours training |
 | **Annotation Tool** | Roboflow | Free tier, YOLO-ready export |
 | **Storage** | Local HDD + Backblaze B2 | $1.50/month, motion-based recording |
 | **Expected Accuracy** | 75-85% mAP | Suitable for FYP demonstration |
 | **Total Budget** | <$100 | Extremely affordable |
 | **Timeline** | 14 weeks | Detailed in Section 7 |
+| **Want higher accuracy?** | RT-DETR-l | Transformer model, better context |
+| **Impressive demo?** | YOLO-World | Zero-shot detection, no retraining |
 
 ---
 
@@ -327,7 +332,8 @@ class MotionDetector:
 By completing this FYP, you will:
 
 ✅ Understand deep learning for computer vision  
-✅ Master YOLO object detection  
+✅ Master YOLO object detection (v8 through v11)  
+✅ Evaluate and compare alternative pretrained models  
 ✅ Gain experience with real-world datasets  
 ✅ Learn data annotation and augmentation  
 ✅ Implement cloud storage solutions  
@@ -370,6 +376,13 @@ By completing this FYP, you will:
 - Use local storage for recent data
 - Set aggressive retention policies
 - Use Backblaze B2 (cheapest cloud)
+
+### Issue 6: "I want to try a different model (not YOLOv8)"
+**Solution**:
+- See [DATASET_AND_MODEL_RESEARCH.md Section 3.6](DATASET_AND_MODEL_RESEARCH.md#36-advanced-yolo-variants-beyond-yolov8) for advanced YOLO variants
+- See [Section 3.7](DATASET_AND_MODEL_RESEARCH.md#37-non-yolo-pretrained-models) for non-YOLO alternatives
+- Use [Section 3.8 Decision Guide](DATASET_AND_MODEL_RESEARCH.md#38-model-selection-decision-guide) to choose
+- All YOLO variants (v8/v9/v10/v11/World) and RT-DETR use the same Ultralytics API — it's a one-line change
 
 ---
 
